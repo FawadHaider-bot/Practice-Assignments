@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top left, #55cdf5, white);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  width: 100%;
+  /* background-color: black; */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 7rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  width: max-content;
+}
+
+.score {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #00dffd;
+  padding: 1rem 3rem;
+  border-radius: 0.75rem;
+}
+
+.current {
+  padding-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.total {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.left {
+  width: 50%;
+  background-color: azure;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.right {
+  width: 50%;
+  background-color: azure;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.btn {
+  position: absolute;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4rem;
+  background-color: rgba(255, 255, 255, 0.842);
+  backdrop-filter: blur(5px);
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.dice {
+  position: absolute;
+  width: 120px;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%);
+}
+
+.newGame {
+  top: 22%;
+}
+
+.roll {
+  top: 63%;
+}
+
+.hold {
+  top: 73%;
+}
+
+.overlay {
+  position: absolute;
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popWindow {
+  background-color: rgb(255, 255, 255);
+  padding: 3rem 5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.winnerTag {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.winner {
+  font-size: 1.75rem;
+}
+
+.hide {
+  display: none;
+}
+
+.change {
+  background-color: rgb(105, 235, 191);
+}
+
+@media (max-width: 990px) {
+  .outer {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    /* width: 80%; */
+  }
+  .section {
+    width: 100%;
+    height: 50%;
+    padding: 2rem 9rem;
+  }
+  .player {
+    font-size: 2rem;
+  }
+  .left {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+  }
+  .right {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .score {
+    margin-bottom: 1rem;
+  }
+
+  .current {
+    padding-bottom: 0.2rem;
+    font-size: 0.75rem;
+  }
+
+  .inner {
+    width: 100%;
+  }
+
+  .newGame {
+    top: 3%;
+    left: 50%;
+    width: max-content;
+  }
+  .dice {
+    top: 1.5%;
+    left: 28%;
+    width: 3.25rem;
+    border: 1px solid #00dffd;
+  }
+  .roll {
+    top: 95%;
+    left: 50%;
+    transform: translate(-131%, -50%);
+  }
+  .hold {
+    top: 95%;
+    left: 50%;
+    transform: translate(60%, -50%);
+  }
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .outer {
+    width: 100%;
+  }
+  .inner {
+    width: 100%;
+  }
+  .section {
+    padding: 1.5rem 4.5rem;
+  }
+  .dice {
+    left: 17%;
+  }
+}
